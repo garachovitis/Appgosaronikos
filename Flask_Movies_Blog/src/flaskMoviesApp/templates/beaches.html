@@ -1,0 +1,17 @@
+<!-- FILEPATH: /home/geoarach/ISLAND PROJECT/Flask_Movies_Blog/src/flaskMoviesApp/templates/beaches.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ location }}
+{% endblock %}
+
+{% block content %}
+    <h1>List of Beaches</h1>
+    <ul>
+        <!-- BEGIN: Loop through beach names and ratings from the database -->
+        {% for beach in beaches %}
+            <li>{{ beach.beachName }} - {{ beach.rating }}</li>
+        {% endfor %}
+        <!-- END: Loop -->
+    </ul>
+{% endblock %}
